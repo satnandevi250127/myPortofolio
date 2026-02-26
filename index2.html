@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Saya</title>
+    <style>
+        /* Konfigurasi Dasar */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f2fd; /* Biru Pastel Terang */
+            color: #5d6d7e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efek Sprinkles Menggunakan Pseudo-element */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                radial-gradient(#bbdefb 20%, transparent 20%),
+                radial-gradient(#90caf9 20%, transparent 20%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        /* Kartu Biodata */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 5px solid #bbdefb;
+            position: relative;
+        }
+
+        /* Foto Profil */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #90caf9;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+
+        /* Teks */
+        h1 {
+            color: #5499c7;
+            margin-bottom: 5px;
+        }
+
+        .nim {
+            font-weight: bold;
+            color: #a9cce3;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: #d6eaf8;
+            margin: 20px 0;
+        }
+
+        .pengalaman {
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .pengalaman h3 {
+            color: #7fb3d5;
+            border-left: 4px solid #7fb3d5;
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Dekorasi Tambahan */
+        .sprinkle-decoration {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+        
+        <h1>Nama Lengkap Kamu</h1>
+        <div class="nim">NIM: 123456789</div>
+        
+        <hr>
+
+        <div class="pengalaman">
+            <h3>Pengalaman Hidup</h3>
+            <p>
+                Tuliskan kisah singkatmu di sini. Misalnya: "Saya adalah seorang mahasiswa yang antusias belajar teknologi baru. Pernah menjuarai lomba makan kerupuk tingkat RT hingga belajar coding secara otodidak selama pandemi."
+            </p>
+            <p>
+                "Selalu percaya bahwa proses tidak akan mengkhianati hasil, terutama jika prosesnya dibarengi dengan kopi yang enak."
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
